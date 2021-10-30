@@ -10,6 +10,7 @@ class Login extends StatelessWidget {
         TextStyle(fontSize: 22,fontWeight: FontWeight.bold,
             ))
       ),)
+
     );
   }
 }
