@@ -1,3 +1,4 @@
+import 'package:faysa_flatter/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,11 +12,14 @@ class MyBook extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: Colors.white,
+
       home: Homepage(
       ),
     );
   }
 }
+
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
 
@@ -32,19 +36,43 @@ class _HomepageState extends State<Homepage> {
       title: Text("Facebook"),backgroundColor: Colors.blueAccent,
     ),
       body:
-
-
       Container(
         child: SingleChildScrollView(
           child: Column(
 
-            children: [ Image.asset("assets/image/image.jpg"),
-              Image.asset("assets/image/img.png.jpg"),
-              Image.asset("assets/image/imagell.jpg"),
 
+            children: [
+              Image.asset("assets/image/loginimg.png",fit:BoxFit.cover,),
 
-              Text("give me password",style:TextStyle(fontStyle: FontStyle.normal,fontSize: 25,fontWeight: FontWeight.bold)
-                ,)
+              Text("Wellcome",style:TextStyle(
+                  fontStyle: FontStyle.normal,fontSize: 22,
+                  fontWeight: FontWeight.bold),
+              ),
+            TextFormField(
+            decoration:
+            InputDecoration(
+                hintText: " Eanter Username",
+                labelText: "user name"
+                ),
+             ),
+              TextFormField(
+                decoration:
+                InputDecoration(
+                    hintText: " Eanter Password",hintStyle: TextStyle(color: Colors.red),
+                    labelText: "Password"
+                ),
+              ),
+              ElevatedButton(
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context)=> Login()));
+                },
+                child: Text("LogIn"),
+              ),
+
+              //ElevatedButton(onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context=> )))
+             // }, child: Text("Forget Password"))
+
             ],
           ),
         ),
