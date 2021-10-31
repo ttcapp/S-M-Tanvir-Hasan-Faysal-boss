@@ -7,6 +7,8 @@ void main() {
 }
 double conHight=100;
 double conwidth=100;
+bool passviss= true;
+
 class MyBook extends StatelessWidget {
   const MyBook({Key? key}) : super(key: key);
 
@@ -39,6 +41,7 @@ class _HomepageState extends State<Homepage> {
       body:
       Container(
         child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Column(
 
 
@@ -94,8 +97,26 @@ class _HomepageState extends State<Homepage> {
                 ),
              ),
               TextFormField(
+                obscureText: passviss,
                 decoration:
                 InputDecoration(
+
+                  suffixIcon:
+                  InkWell(
+                    onTap: (){
+                      setState(() {
+                        if(passviss==true)
+                          passviss=false;
+                        else
+                          passviss=true;
+                      });
+                    },
+                    child: Icon(Icons.remove_red_eye,color: Colors.pinkAccent,
+
+                    ),
+                  ),
+
+
                     hintText: " Eanter Password",hintStyle: TextStyle(color: Colors.red),
                     labelText: "Password"
                 ),
