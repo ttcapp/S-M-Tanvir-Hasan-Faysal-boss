@@ -127,7 +127,7 @@ class _HomepageState extends State<Homepage> {
               ElevatedButton(
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(
-                      builder: (context)=> Newaccount()));
+                      builder: (context)=> Login()));
                 },
                 child: Text("LogIn"),
               ),
@@ -136,7 +136,7 @@ class _HomepageState extends State<Homepage> {
               SizedBox(height: 10,),
               ElevatedButton(
                   onPressed: (){Navigator.push(context,MaterialPageRoute(
-                      builder:(context)=>Login()));
+                      builder:(context)=> Newaccount()));
                   }, child: Text("Open New Account")
               ),
 
