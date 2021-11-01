@@ -1,7 +1,8 @@
 import 'package:faysa_flatter/main.dart';
 import 'package:flutter/material.dart';
-class homepage extends StatelessWidget {
-  const homepage({Key? key}) : super(key: key);
+
+class Login extends StatelessWidget {
+  const Login({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

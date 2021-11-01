@@ -1,7 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.faysa_flatter">
    <application
-        android:label="faysa_flatter"
+        android:label="Raw"
+
+
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

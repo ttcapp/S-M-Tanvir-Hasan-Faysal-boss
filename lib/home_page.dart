@@ -4,14 +4,14 @@ final _formkey=GlobalKey<FormState>();
 TextEditingController email_numbercomtroller=TextEditingController();
 TextEditingController Date_of_birthcomtroller=TextEditingController();
 TextEditingController Namecomtroller=TextEditingController();
-class Login extends StatefulWidget {
-  const Login({Key? key}) : super(key: key);
+class Newaccount extends StatefulWidget {
+  const Newaccount({Key? key}) : super(key: key);
 
   @override
-  _LoginState createState() => _LoginState();
+  _NewaccountState createState() => _NewaccountState();
 }
 
-class _LoginState extends State<Login> {
+class _NewaccountState extends State<Newaccount> {
   @override
   Widget build(BuildContext context) {
     double h=MediaQuery.of(context).size.height;
@@ -59,7 +59,7 @@ class _LoginState extends State<Login> {
                  onPressed: (){
 
                  },
-                 child: "text")
+                 child: Text("text"))
 
           ],
     ),

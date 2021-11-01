@@ -1,4 +1,5 @@
 import 'package:faysa_flatter/home_page.dart';
+import 'package:faysa_flatter/open_account.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,8 @@ class MyBook extends StatelessWidget {
     );
   }
 }
+
+
 
 class Homepage extends StatefulWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -124,13 +127,18 @@ class _HomepageState extends State<Homepage> {
               ElevatedButton(
                 onPressed: (){
                   Navigator.push(context, MaterialPageRoute(
-                      builder: (context)=> Login()));
+                      builder: (context)=> Newaccount()));
                 },
                 child: Text("LogIn"),
               ),
-
-              //ElevatedButton(onPressed: (){Navigator.push(context,MaterialPageRoute(builder:(context=> )))
-             // }, child: Text("Forget Password"))
+              SizedBox(height: 10,),
+              Text(" Don't have an account?"),
+              SizedBox(height: 10,),
+              ElevatedButton(
+                  onPressed: (){Navigator.push(context,MaterialPageRoute(
+                      builder:(context)=>Login()));
+                  }, child: Text("Open New Account")
+              ),
 
             ],
           ),
@@ -141,3 +149,4 @@ class _HomepageState extends State<Homepage> {
     );
   }
 }
+
